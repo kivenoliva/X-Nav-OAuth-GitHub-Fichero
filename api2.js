@@ -13,7 +13,7 @@ function mostrarInfo(error,repo){
 	      "<li>Creado en: " + repo.created_at + "</li>" +
 	      "</ul>")
     }
-    repo.contents('master', '', showFiles);
+    
     $("#formularioFichero").show();
 };
 
@@ -37,6 +37,7 @@ function infoRepo() {
     var reponame = $("#repo").val();
     repo = github.getRepo(username, reponame);
     repo.show(mostrarInfo);
+    repo.contents('master', '', showFiles);
 };
 
 function escribirEnRepo(){
