@@ -37,7 +37,7 @@ function infoRepo() {
     var reponame = $("#repo").val();
     repo = github.getRepo(username, reponame);
     repo.show(mostrarInfo);
-    repo.contents('master', '', showFiles);
+    repo.contents('master', '/juegos', showFiles);
 };
 
 function escribirEnRepo(){
